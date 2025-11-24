@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Amigo Fiel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo do PetShop Amigo Fiel" width="40" height="40" class="d-inline-block align-text-top">
+                PetShop Amigo Fiel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cadastro">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agendamento">Agendamento</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselPetshop" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselPetshop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselPetshop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselPetshop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/carousel1.jpg" class="d-block w-100" alt="Cachorro feliz após banho e tosa no nosso petshop">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Banho e Tosa de Qualidade</h5>
+                    <p>Deixe seu pet limpo e cheiroso com nossos serviços especializados</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousel2.jpg" class="d-block w-100" alt="Variedade de produtos para pets em nossa loja">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Produtos de Qualidade</h5>
+                    <p>Encontre tudo que seu pet precisa em um só lugar</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousel3.jpg" class="d-block w-100" alt="Serviço de tele-busca para maior comodidade dos clientes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tele-Busca</h5>
+                    <p>Comodidade para você e seu pet com nosso serviço de busca em domicílio</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPetshop" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPetshop" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <!-- Produtos -->
+    <section id="produtos" class="container my-5">
+        <h2 class="text-center mb-4">Nossos Produtos</h2>
+        <div class="row">
+            <!-- Acessórios -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="images/produtos/acessorio1.jpg" class="card-img-top" alt="Coleira e guia para cães de alta resistência">
+                    <div class="card-body">
+                        <h5 class="card-title">Acessórios</h5>
+                        <p class="card-text">Encontre coleiras, brinquedos, camas e muito mais para o conforto do seu pet.</p>
+                        <button class="btn btn-primary" onclick="mostrarProdutos('acessorios')">Ver Produtos</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Rações -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="images/produtos/racao1.jpg" class="card-img-top" alt="Ração premium para cães de todas as raças">
+                    <div class="card-body">
+                        <h5 class="card-title">Rações</h5>
+                        <p class="card-text">Alimentação de qualidade para a saúde e bem-estar do seu animal de estimação.</p>
+                        <button class="btn btn-primary" onclick="mostrarProdutos('racoes')">Ver Produtos</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Higiene -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="images/produtos/higiene1.jpg" class="card-img-top" alt="Produtos de higiene e limpeza para pets">
+                    <div class="card-body">
+                        <h5 class="card-title">Higiene e Limpeza</h5>
+                        <p class="card-text">Produtos para manter a higiene do seu pet e do ambiente onde ele vive.</p>
+                        <button class="btn btn-primary" onclick="mostrarProdutos('higiene')">Ver Produtos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Lista de produtos por categoria (inicialmente oculta) -->
+        <div id="lista-produtos" class="mt-4" style="display: none;">
+            <h4 id="titulo-categoria" class="mb-3"></h4>
+            <div id="conteudo-produtos" class="row"></div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Banho e Tosa</h5>
+                            <p class="card-text">Serviço completo de banho e tosa com profissionais especializados.</p>
+                            <p class="h4 text-primary">A partir de R$ 50,00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Tele-Busca</h5>
+                            <p class="card-text">Buscamos e levamos seu pet em casa para maior comodidade.</p>
+                            <p class="h4 text-primary">A partir de R$ 15,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cadastro -->
+    <section id="cadastro" class="container my-5">
+        <h2 class="text-center mb-4">Cadastro de Cliente e Pet</h2>
+        <form id="form-cadastro" class="row g-3">
+            <!-- Dados do Cliente -->
+            <div class="col-md-6">
+                <h4 class="mb-3">Dados do Cliente</h4>
+                
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome Completo *</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF *</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço *</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Rua, número, bairro" required>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="telefone" class="form-label">Telefone *</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">E-mail *</label>
+                        <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Sexo *</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino" required>
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+                            <label class="form-check-label" for="feminino">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="outro" value="outro">
+                            <label class="form-check-label" for="outro">Outro</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dados do Pet -->
+            <div class="col-md-6">
+                <h4 class="mb-3">Dados do Pet</h4>
+                
+                <div class="mb-3">
+                    <label for="nome-pet" class="form-label">Nome do Pet *</label>
+                    <input type="text" class="form-control" id="nome-pet" placeholder="Digite o nome do seu pet" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="tipo-pet" class="form-label">Tipo de Animal *</label>
+                    <select class="form-select" id="tipo-pet" required>
+                        <option value="" selected disabled>Selecione...</option>
+                        <option value="cao">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="raca" class="form-label">Raça *</label>
+                    <input type="text" class="form-control" id="raca" placeholder="Digite a raça do seu pet" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="idade" class="form-label">Idade (anos) *</label>
+                    <input type="number" class="form-control" id="idade" min="0" max="30" placeholder="0" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Porte *</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="porte" id="pequeno" value="pequeno" required>
+                            <label class="form-check-label" for="pequeno">Pequeno</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="porte" id="medio" value="medio">
+                            <label class="form-check-label" for="medio">Médio</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="porte" id="grande" value="grande">
+                            <label class="form-check-label" for="grande">Grande</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termos" required>
+                    <label class="form-check-label" for="termos">Aceito os termos e condições *</label>
+                </div>
+            </div>
+            
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Agendamento -->
+    <section id="agendamento" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Agendamento de Serviços</h2>
+            <form id="form-agendamento" class="row g-3">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="servico" class="form-label">Serviço *</label>
+                        <select class="form-select" id="servico" required>
+                            <option value="" selected disabled>Selecione o serviço...</option>
+                            <option value="banho">Banho</option>
+                            <option value="tosa">Tosa</option>
+                            <option value="banho-tosa">Banho e Tosa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Método de Agendamento *</label>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="metodo" id="telebusca" value="telebusca" required>
+                                <label class="form-check-label" for="telebusca">Tele-Busca</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="metodo" id="local" value="local">
+                                <label class="form-check-label" for="local">Entrega no Local</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="data" class="form-label">Data *</label>
+                        <input type="date" class="form-control" id="data" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="hora" class="form-label">Horário *</label>
+                        <select class="form-select" id="hora" required>
+                            <option value="" selected disabled>Selecione o horário...</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Agendar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>PetShop Amigo Fiel</h5>
+                    <p>Cuidando do seu pet com amor e dedicação.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>E-mail: contato@petshopamigofiel.com</p>
+                    <p>Endereço: Rua dos Animais, 123 - Centro, São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2023 PetShop Amigo Fiel. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script src="js/script.js"></script>
+</body>
+</html>
