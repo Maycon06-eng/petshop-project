@@ -1,0 +1,83 @@
+/* Estilos personalizados para o PetShop */
+
+/* Carousel */
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+/* Cards de produtos */
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+}
+
+/* Formulários */
+.form-label {
+    font-weight: 600;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Acessibilidade - Contraste */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast .navbar {
+    background-color: #000 !important;
+}
+
+.high-contrast .card {
+    background-color: #333;
+    color: #fff;
+}
+
+.high-contrast .form-control {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
