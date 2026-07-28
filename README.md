@@ -1,2 +1,2 @@
 # petshop-project
-Projeto Petshop - Fase 2
+Projeto Petshop - com CSS
